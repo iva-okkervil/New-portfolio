@@ -621,6 +621,7 @@ footer::before {
       -ms-flex-align: center;
           align-items: center;
   max-width: 1400px;
+  margin: 0 auto;
   padding: 0 30px;
 }
 .footer__logo {
