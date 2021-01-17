@@ -73,7 +73,17 @@ a {
 // socials
 
 .socials__list {
-	
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+
+.socials__link {
+	width: 55px;
+	svg path {transition: all 0.3s linear;}
+
+	&:hover, &:focus {svg path {fill: rgba(65, 119, 147, 0.5);}}
+	&:active {svg path {fill: #3dbeff;}}
 }
 
 // buttons, inputs
@@ -147,4 +157,3 @@ textarea {resize: none;}
 	font-weight: 600;
 	letter-spacing: 0.3px;
 }
-
