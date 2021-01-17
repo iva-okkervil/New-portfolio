@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Сайт-портфолио</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+	
+	<!-- HEADER -->
+	<header>
+		<!-- header__content -->
+		<div class="header__content">
+			
+			<!-- header__navigation -->
+			<div class="header__navigation">
+
+				<a href="./index.html" class="header__logo">
+					<img src="./images/logo-willow.png" alt="Logo">
+				</a>
+
+				<div class="navigation">
+					<a href="./index.html" class="navigation-link">Главная</a>
+					<a href="#resume" class="navigation-link">Обо мне</a>
+					<a href="#portfolio" class="navigation-link">Портфолио</a>
+					<a href="#contacts" class="navigation-link">Контакты</a>
+				</div>
+
+			</div>
+			<!-- // header__navigation -->
+
+			<!-- container -->
+			<div class="container">
+
+				<div class="header__info">
+					
+					<div class="header__info-desc">
+						<p>Приветствую!<br>Меня зовут Анастасия, я - верстальщик сайтов, начинающий frontend-разработчик. Работаю с соблюдением сроков и выполнением технического задания.</p>						
+					</div>
+
+					<div class="header__buttons">
+						<a href="#resume" class="button">Познакомиться</a>
+						<a href="#portfolio" class="button">Смотреть работы</a>
+					</div>
+
+				</div>
+			</div>
+			<!-- // container -->
+
+		</div>
+		<!-- // header__content -->
+	</header>
+	<!-- // HEADER -->
+
+	<!-- MAIN -->
+	<main>
+		
+		<!-- resume -->
+		<section class="resume" id="resume">
+			<!-- container -->
+			<div class="container">
+				
+				<!-- resume__content -->
+				<div class="resume__content">
+					<div class="resume__img">
+						<img src="./images/resume/photo.jpg" alt="Фотография">
+					</div>
+
+					<!-- resume__info -->
+					<div class="resume__info">
+
+						<div class="resume__info-title">
+							<h3 class="title-medium">Обо мне:</h3>
+						</div>						
+						<div class="resume__info-desc">
+							<ul class="resume__info-list">
+								<li>верстаю под десктопы, мобильные устройства и планшеты;</li>
+								<li>Pixel Perfect (полное соответствие макету);</li>
+								<li>работаю с помощью препроцессоров LESS, SASS;</li>
+								<li>знаю методологию БЭМ;</li>
+								<li>пользуюсь Git, GitHub, GitBash;</li>
+								<li>знаю основы JavaScript, jQuery.</li>
+							</ul>
+							<div class="resume__info-text">
+								<p>Окончила курсы по вёрстке сайтов в школе <a href="https://webcademy.ru/htmlstart/" class="resume__info-text-link">Webcademy.ru</a>.</p>
+								<p>На данный момент нахожусь в поиске работы на позицию HTML-верстальщика, Junior Frontend-разработчика.</p>
+							</div>
+
+							<div class="resume__info-button">
+								<a href="#contacts" class="button resume__button">Связаться со мной</a>
+							</div>
+						</div>
+					</div>
+					<!-- // resume__info -->
+
+				</div>
+				<!-- // resume__content -->
+
+			</div>
+			<!-- // container -->
+		</section>
+
+		<!-- portfolio -->
+		<section class="portfolio">
+			<!-- container -->
+			<div class="container">
+
+				<div class="portfolio__title" id="portfolio">
+					<h2 class="section-title">Портфолио</h2>
+				</div>
+
+				<!-- portfolio__content -->
+				<div class="portfolio__content">
+
+					<!-- portfolio__filter -->
+					<div class="portfolio__filter">
+						<button type="button" class="portfolio__filter-item" data-filter="all">Все работы</button>
+						<button type="button" class="portfolio__filter-item" data-filter=".flexbox">Flexbox</button>
+						<button type="button" class="portfolio__filter-item" data-filter=".adaptive">Адаптивная вёрстка</button>
+					</div>
+					<!-- // portfolio__filter -->
+
+					<!-- row -->
+					<div class="row" id="portfolio__works">
+
+						<a href="projects/portfolio/docs/index.html" class="portfolio__card mix flexbox adaptive">
+							<div class="portfolio__card-img">
+								<img src="./images/portfolio/portfolio.jpg" alt="Портфолио">
+							</div>	
+
+							<div class="portfolio__card-desc">
+								<div class="portfolio__card-title">
+									<h3 class="title-small">Проект "Портфолио"</h3>
+								</div>
+								<div class="portfolio__card-text">
+									<p>Вёрстка финального проекта-портфолио по макету школы Webcademy с использованием Flexbox. Адаптивная вёрстка.</p>
+								</div>
+							</div>
+						</a>
+
+						<a href="./projects/unit/index.html" class="portfolio__card mix flexbox">
+
+							<div class="portfolio__card-img">
+								<img src="./images/portfolio/unit.jpg" alt="Юнит">
+							</div>	
+
+							<div class="portfolio__card-desc">
+								<div class="portfolio__card-title">
+									<h3 class="title-small">Проект "Юнит"</h3>
+								</div>
+								<div class="portfolio__card-text">
+									<p>Флексбокс-вёрстка одностраничного сайта по макету школы Webcademy.</p>
+								</div>
+							</div>	
+
+						</a>
+
+						<a href="projects/forest-travel/index.html" class="portfolio__card mix">
+
+							<div class="portfolio__card-img">
+								<img src="./images/portfolio/forest-travel.jpg" alt="ФорестТревел">
+							</div>
+
+							<div class="portfolio__card-desc">
+								<div class="portfolio__card-title">
+									<h3 class="title-small">Проект "ФорестТрэвел"</h3>
+								</div>
+								<div class="portfolio__card-text">
+									<p>Блочная вёрстка многостраничного сайта по макету школы Webcademy.</p>
+								</div>
+							</div>
+
+						</a>
+
+						<a href="projects/cuda/index.html" class="portfolio__card mix flexbox">
+
+							<div class="portfolio__card-img">
+								<img src="./images/portfolio/cuda.jpg" alt="Cuda">
+							</div>	
+
+							<div class="portfolio__card-desc">
+								<div class="portfolio__card-title">
+									<h3 class="title-small">Проект "Cuda"</h3>
+								</div>
+								<div class="portfolio__card-text">
+									<p>Вёрстка одностраничного сайта по макету от GraphicBurger.</p>
+								</div>
+							</div>
+						</a>
+
+						<a href="projects/motobike-card/index.html" class="portfolio__card mix">
+							<div class="portfolio__card-img">
+								<img src="./images/portfolio/card-2.jpg" alt="Карточка товара">
+							</div>	
+
+							<div class="portfolio__card-desc">
+								<div class="portfolio__card-title">
+									<h3 class="title-small">Вёрстка карточки товара</h3>
+								</div>
+								<div class="portfolio__card-text">
+									<p>Вёрстка карточки по макету школы Webcademy.</p>
+								</div>
+							</div>
+						</a>
+
+						<a href="projects/adaptive_mobile_first/index.html" class="portfolio__card mix adaptive">
+							<div class="portfolio__card-img">
+								<img src="./images/portfolio/adaptive.jpg" alt="Mobile first">
+							</div>	
+
+							<div class="portfolio__card-desc">
+								<div class="portfolio__card-title">
+									<h3 class="title-small">Mobile First</h3>
+								</div>
+								<div class="portfolio__card-text">
+									<p>Пример адаптивной вёрстки, выполненный по макету школы Webcademy.</p>
+								</div>
+							</div>
+						</a>
+
+					</div>
+					<!-- // row -->
+
+				</div>
+				<!-- // portfolio__content -->
+
+			</div>
+			<!-- // container -->
+		</section>
+		<!-- // portfolio -->
+
+		<!-- contacts -->
+		<section class="contacts">
+			<!-- container -->
+			<div class="container">
+
+				<div class="contacts__title" id="contacts">
+					<h2 class="section-title">Контакты</h2>
+				</div>
+
+				<!-- contacts__content -->
+				<div class="contacts__content">
+
+					<div class="contacts__desc">
+						<p>Если вы ищите специалиста по вёрстке сайтов, frontend-разработчика в команду или для работы над проектом, напишите мне.</p>
+					</div>					
+
+					<div class="contacts__info">
+
+						<div class="contacts__info-list">
+							<a href="mailto:cheshire_tomcat@list.ru" class="contacts__info-list-item">
+								<span class="info-item-type">E-mail</span>
+								<span class="info-link">cheshire_tomcat@list.ru</span>
+							</a>
+							<a href="tel:+79955071094" class="contacts__info-list-item">
+								<span class="info-item-type">Телефон</span>
+								<span class="info-text">+7 (995) 507-10-94</span>
+							</a>
+							<div class="contacts__info-list-item">
+								<span class="info-item-type">Адрес</span>
+								<span class="info-text">Россия, Москва</span>
+							</div>
+						</div>
+
+						<div class="socials__list">
+							<a href="https://github.com/iva-okkervil" class="socials__link">
+
+							</a>
+							<a href="https://t.me/i_okkervil" class="socials__link">
+								
+						</a>
+						<a href="https://www.linkedin.com/in/anastasia-zvezdina-3a35b6200/" class="socials__link">
+							
+					</a>
+				</div>
+
+			</div>
+
+		</div>
+		<!-- // contacts__content -->
+
+	</div>
+	<!-- // container -->
+</section>
+<!-- // contacts -->
+
+</main>
+<!-- // MAIN -->
+
+<!-- LIBS -->
+<script src="./libs/jquery/jquery-3.0.0.min.js"></script>
+<script src="./libs/mixitup3/mixitup.min.js"></script>
+<script src="./libs/jquery.validate/jquery.validate.js"></script>
+<script src="./js/main.js"></script>
+
+</body>
+</html>

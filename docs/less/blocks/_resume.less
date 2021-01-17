@@ -1,0 +1,97 @@
+.resume {
+	padding: 150px 0 150px;
+	background-color: #fff;
+	color: #417793;
+}
+
+.resume__content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.resume__img {
+	max-width: 35%;
+
+	img {
+		border-radius: 50%;
+		background-color: #98bdd0;
+		object-fit: cover;
+		object-position: center;
+	}
+}
+
+.resume__info {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	max-width: 50%;
+}
+
+.resume__info::before {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -35px;
+	width: 7px;
+	height: 100%;
+	background-color: #9ac6e1;
+	opacity: 40%;
+	content: "";
+}
+
+.resume__info-title {margin: 0 0 40px;}
+
+.resume__info-desc {
+	font-size: 20px;
+	font-weight: 400;
+	letter-spacing: 0.3px;
+	text-align: justify;
+
+	p {
+		margin: 15px 0 0;
+		&:first-child {margin: 0;}
+	}
+}
+
+.resume__info-list {
+	margin: 0 0 40px;
+
+	li {
+		position: relative;
+		padding: 0 0 15px 30px;
+		&:last-child {padding: 0 0 0 30px;}
+	}
+
+	li::before {
+		display: block;
+		position: absolute;
+		top: 8px;
+		left: 0;
+		width: 15px;
+		height: 15px;
+		transform: rotate(90deg);
+		background-image: url(../images/resume/leaf.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		content: "";
+	}
+}
+
+.resume__info-text {margin: 0 0 40px;}
+
+.resume__info-text-link {
+	color: #9ac6e1;
+	&:hover, &:focus {color: #006090;}
+	&:active {color: #3dbeff;}
+}
+
+.resume__button {
+	background-color: #417793;
+	color: #fff;
+
+	&:hover, &:focus {background-color: #9ac6e1;}
+	&:active {background-color: rgba(154, 198, 225, 0.5);}
+}

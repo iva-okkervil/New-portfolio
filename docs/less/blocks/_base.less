@@ -1,0 +1,150 @@
+* {box-sizing: border-box;}
+
+html {scroll-behavior: smooth;}
+
+html, body, h1, h2, h3, h4, h5, h6, p, ul {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	font-family: 'Exo 2', sans-serif;
+	width: 100%;
+	height: 100%;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	flex-wrap: wrap;
+}
+
+img, svg {
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+
+ul {list-style: none;}
+
+// links
+
+a {
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-decoration: none;
+	color: #fff;
+	transition: all 0.2s linear;
+}
+
+// navigation
+
+.navigation {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navigation-link {
+	padding: 10px 20px;
+	border-radius: 6px;
+	font-size: 18px;
+	font-weight: 400;
+	text-align: center;
+
+	&:hover, &:focus {
+		background-color: rgba(154, 198, 225, 0.5);
+		color: #000;
+	}
+
+	&:active {
+		background-color: #fff;
+		color: #000;
+	}
+}
+
+// socials
+
+.socials__list {
+	
+}
+
+// buttons, inputs
+
+button, input, textarea {
+	padding: 15px 30px;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	background-color: rgba(65, 119, 147, 0.5);
+	cursor: pointer;
+	font-family: 'Exo 2', sans-serif;
+	font-size: 20px;
+	font-weight: 600;
+	text-align: center;
+	letter-spacing: 0.3px;
+	color: #fff;
+	transition: all 0.2s linear;
+
+	&:hover, &:focus {
+		background-color: #417793;
+		color: #000;
+	}
+
+	&:active {
+		background-color: #fff;
+		color: #000;
+	}
+}
+
+.button {
+	padding: 15px 30px;
+	background-color: rgba(154, 198, 225, 0.5);
+	border-radius: 10px;
+	font-size: 20px;
+	font-weight: 600;
+	text-align: center;
+	letter-spacing: 0.3px;
+	transition: all 0.2s linear;
+
+	&:hover, &:focus {
+		background-color: #9ac6e1;
+		color: #000;
+	}
+
+	&:active {
+		background-color: #fff;
+		color: #000;
+	}
+}
+
+textarea {resize: none;}
+
+// titles
+
+.section-title {
+	font-size: 50px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+}
+
+.title-medium {
+	font-size: 36px;
+	font-weight: 600;
+	letter-spacing: 0.5px;
+	line-height: 0.7;
+}
+
+.title-small {
+	font-size: 30px;
+	font-weight: 600;
+	letter-spacing: 0.3px;
+}
+
