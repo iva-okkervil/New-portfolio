@@ -16,6 +16,9 @@ html, body {
 .container {
 	max-width: 1000px;
 	margin: 0 auto;
+	padding: 0 20px 0;
+
+	@media (min-width: 1080px) {padding: 0;}
 }
 
 .row {
@@ -33,6 +36,11 @@ img, svg {
 
 ul {list-style: none;}
 
+.logo {
+	transform: rotate(20deg);
+	transition: all 0.2s linear;
+}
+
 // links
 
 a {
@@ -40,7 +48,7 @@ a {
 	outline: none;
 	cursor: pointer;
 	text-decoration: none;
-	color: #fff;
+	color: @text-color-white;
 	transition: all 0.2s linear;
 }
 
@@ -55,19 +63,11 @@ a {
 .navigation-link {
 	padding: 10px 20px;
 	border-radius: 6px;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 400;
 	text-align: center;
 
-	&:hover, &:focus {
-		background-color: rgba(154, 198, 225, 0.5);
-		color: #000;
-	}
-
-	&:active {
-		background-color: #fff;
-		color: #000;
-	}
+	@media (min-width: 768px) {font-size: 18px;}
 }
 
 // socials
@@ -79,59 +79,48 @@ a {
 }
 
 .socials__link {
-	width: 55px;
+	width: 45px;
 	svg path {transition: all 0.3s linear;}
 
-	&:hover, &:focus {svg path {fill: rgba(65, 119, 147, 0.5);}}
-	&:active {svg path {fill: #3dbeff;}}
+	@media (min-width: 768px) {width: 55px;}
 }
 
 // buttons, inputs
 
 button, input, textarea {
-	padding: 15px 30px;
+	padding: 15px 20px;
 	border-radius: 10px;
 	border: none;
 	outline: none;
-	background-color: rgba(65, 119, 147, 0.5);
+	background-color: @button-color-dark-fade;
 	cursor: pointer;
 	font-family: 'Exo 2', sans-serif;
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 600;
 	text-align: center;
 	letter-spacing: 0.3px;
-	color: #fff;
+	color: @text-color-white;
 	transition: all 0.2s linear;
 
-	&:hover, &:focus {
-		background-color: #417793;
-		color: #000;
-	}
-
-	&:active {
-		background-color: #fff;
-		color: #000;
+	@media (min-width: 1080px) {
+		padding: 15px 30px;
+		font-size: 20px;
 	}
 }
 
 .button {
-	padding: 15px 30px;
-	background-color: rgba(154, 198, 225, 0.5);
+	padding: 15px 20px;
+	background-color: @button-color-light-fade;
 	border-radius: 10px;
-	font-size: 20px;
+	font-size: 16px;
 	font-weight: 600;
 	text-align: center;
 	letter-spacing: 0.3px;
 	transition: all 0.2s linear;
 
-	&:hover, &:focus {
-		background-color: #9ac6e1;
-		color: #000;
-	}
-
-	&:active {
-		background-color: #fff;
-		color: #000;
+	@media (min-width: 1080px) {
+		padding: 15px 30px;
+		font-size: 20px;
 	}
 }
 
@@ -140,20 +129,35 @@ textarea {resize: none;}
 // titles
 
 .section-title {
-	font-size: 50px;
+	font-size: 40px;
 	font-weight: 700;
-	letter-spacing: 0.5px;
+	letter-spacing: 0.3px;
+
+	@media (min-width: 1080px) {
+		font-size: 50px;
+		letter-spacing: 0.5px;
+	}
 }
 
 .title-medium {
-	font-size: 36px;
+	font-size: 28px;
 	font-weight: 600;
-	letter-spacing: 0.5px;
+	letter-spacing: 0.3px;
 	line-height: 0.7;
+
+	@media (min-width: 1080px) {
+		font-size: 36px;
+		letter-spacing: 0.5px;
+	}
 }
 
 .title-small {
-	font-size: 30px;
+	font-size: 24px;
 	font-weight: 600;
 	letter-spacing: 0.3px;
+
+	@media (min-width: 1080px) {
+		font-size: 30px;
+		letter-spacing: 0.3px;
+	}
 }

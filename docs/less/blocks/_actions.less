@@ -1,0 +1,83 @@
+// base
+
+.logo {
+	&:hover, &:focus {transform: scale(1.3) rotate(20deg);}
+	&:active {transform: scale(1.3) rotate(20deg);}
+}
+
+.navigation-link {
+	&:hover, &:focus {
+		background-color: @button-color-dark-fade;
+		color: @text-color-black;
+	}
+
+	&:active {
+		background-color: @button-color-active;
+		color: @text-color-black;
+	}
+}
+
+.socials__link {
+	&:hover, &:focus {svg path {fill: @button-color-dark-fade;}}
+	&:active {svg path {fill: @button-color-bright;}}
+}
+
+button, input, textarea {
+	&:hover, &:focus {
+		background-color: @button-color-dark;
+		color: @text-color-black;
+	}
+
+	&:active {
+		background-color: @button-color-active;
+		color: @text-color-black;
+	}
+}
+
+.button {
+	&:hover, &:focus {
+		background-color: @button-color-light;
+		color: @text-color-black;
+	}
+
+	&:active {
+		background-color: @button-color-active;
+		color: @text-color-black;
+	}
+}
+
+// resume
+
+.resume__info-text-link {
+	&:hover, &:focus {color: @link-color-dark;}
+	&:active {color: @link-color-bright;}
+}
+
+.resume__button {
+	&:hover, &:focus {background-color: @button-color-light;}
+	&:active {background-color: @button-color-dark-fade;}
+}
+
+// portfolio
+
+.portfolio__card {
+	&:hover, &:focus {
+		background-color: @bg-color-card-hover;
+		border: 2px solid @border-hover;
+		box-shadow: 10px 20px 15px -5px @shadow-hover;
+		color: @text-color-black;
+	}
+
+	&:active {
+		background-color: @bg-color-card-active;
+		border: 2px solid @border-active;
+		box-shadow: 0 20px 15px -5px @shadow-active;
+	}
+}
+
+// contacts
+
+.contacts__info-list-item {
+	&:hover, &:focus {color: @text-color-light-fade;}
+	&:active {color: @text-color-bright;}
+}

@@ -5,8 +5,8 @@ header {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	background-color: #98bdd0;
-	color: #fff;
+	background-color: @bg-color-light;
+	color: @text-color-white;
 }
 
 header::before {
@@ -17,7 +17,7 @@ header::before {
 	width: 100%;
 	height: 100%;
 	content: "";
-	background-color: rgba(65, 119, 147, 0.4);
+	background-color: @bg-color-dark-fade;
 }
 
 .header__content {
@@ -26,23 +26,25 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-	z-index: 5;
+	z-index: 3;
 }
 
 .header__navigation {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	max-width: 1400px;
-	margin: 30px auto 200px;
+	max-width: 1000px;
+	margin: 30px auto 150px;
 	padding: 0 30px;
-	z-index: 9;
+	z-index: 3;
+
+	@media (min-width: 1080px) {
+		max-width: 1400px;
+		margin: 30px auto 200px;
+	}
 }
 
-.header__logo {
-	width: 70px;
-	transform: rotate(20deg);
-}
+.header__logo {max-width: 70px;}
 
 // header__info
 
@@ -55,14 +57,20 @@ header::before {
 
 .header__info-desc {
 	margin: 0 0 40px;
-	font-size: 36px;
+	font-size: 28px;
 	font-weight: 400;
 	text-align: center;
+
+	@media (min-width: 1080px) {font-size: 36px;}
 }
 
 .header__buttons {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 50%;
+	width: 100%;
+
+	@media (min-width: 480px) {width: 80%;}
+	@media (min-width: 640px) {width: 60%;}
+	@media (min-width: 768px) {width: 50%;}
 }

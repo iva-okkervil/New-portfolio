@@ -1,23 +1,31 @@
 .resume {
-	padding: 150px 0 150px;
-	background-color: #fff;
-	color: #417793;
+	padding: 80px 0 80px;
+	background-color: @bg-color-white;
+	color: @text-color-dark;
+
+	@media (min-width: 1080px) {padding: 150px 0 150px;}
 }
 
 .resume__content {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
+
+	@media (min-width: 1080px) {justify-content: space-between;}
 }
 
 .resume__img {
-	max-width: 35%;
+	max-width: 100%;
 
 	img {
 		border-radius: 50%;
-		background-color: #98bdd0;
+		background-color: @bg-color-light;
 		object-fit: cover;
 		object-position: center;
+	}
+
+	@media (min-width: 768px) {
+		max-width: 35%;
 	}
 }
 
@@ -26,7 +34,11 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	max-width: 50%;
+	max-width: 100%;
+
+	@media (min-width: 768px) {
+		max-width: 50%;
+	}
 }
 
 .resume__info::before {
@@ -36,27 +48,34 @@
 	left: -35px;
 	width: 7px;
 	height: 100%;
-	background-color: #9ac6e1;
+	background-color: @bg-color-light;
 	opacity: 40%;
 	content: "";
 }
 
-.resume__info-title {margin: 0 0 40px;}
+.resume__info-title {
+	margin: 0 0 25px;
+	@media (min-width: 1080px) {margin: 0 0 40px;}
+}
 
 .resume__info-desc {
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 400;
 	letter-spacing: 0.3px;
 	text-align: justify;
 
+	@media (min-width: 1080px) {font-size: 20px;}
+
 	p {
-		margin: 15px 0 0;
+		margin: 10px 0 0;
 		&:first-child {margin: 0;}
+		@media (min-width: 1080px) {margin: 15px 0 0}
 	}
 }
 
 .resume__info-list {
-	margin: 0 0 40px;
+	margin: 0 0 25px;
+	@media (min-width: 1080px) {margin: 0 0 40px;}
 
 	li {
 		position: relative;
@@ -80,18 +99,14 @@
 	}
 }
 
-.resume__info-text {margin: 0 0 40px;}
-
-.resume__info-text-link {
-	color: #9ac6e1;
-	&:hover, &:focus {color: #006090;}
-	&:active {color: #3dbeff;}
+.resume__info-text {
+	margin: 0 0 25px;
+	@media (min-width: 1080px) {margin: 0 0 40px;}
 }
 
-.resume__button {
-	background-color: #417793;
-	color: #fff;
+.resume__info-text-link {color: @link-color-light;}
 
-	&:hover, &:focus {background-color: #9ac6e1;}
-	&:active {background-color: rgba(154, 198, 225, 0.5);}
+.resume__button {
+	background-color: @button-color-dark;
+	color: #fff;
 }
