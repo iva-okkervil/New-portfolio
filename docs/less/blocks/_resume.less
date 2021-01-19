@@ -1,21 +1,25 @@
 .resume {
-	padding: 80px 0 80px;
+	padding: 40px 0 40px;
 	background-color: @bg-color-white;
 	color: @text-color-dark;
 
-	@media (min-width: 1080px) {padding: 150px 0 150px;}
+	@media (min-width: 480px) {padding: 80px 0 80px;}
+	@media (min-width: 1024px) {padding: 150px 0 150px;}
 }
 
 .resume__content {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
 	align-items: center;
 
-	@media (min-width: 1080px) {justify-content: space-between;}
+	@media (min-width: 768px) {flex-wrap: nowrap;}
+	@media (min-width: 1024px) {justify-content: space-between;}
 }
 
 .resume__img {
-	max-width: 100%;
+	max-width: 80%;
+	margin: 0 0 40px;
 
 	img {
 		border-radius: 50%;
@@ -26,6 +30,7 @@
 
 	@media (min-width: 768px) {
 		max-width: 35%;
+		margin: 0;
 	}
 }
 
@@ -36,46 +41,52 @@
 	justify-content: space-between;
 	max-width: 100%;
 
-	@media (min-width: 768px) {
-		max-width: 50%;
-	}
+	@media (min-width: 768px) {max-width: 50%;}
 }
 
 .resume__info::before {
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -35px;
-	width: 7px;
-	height: 100%;
-	background-color: @bg-color-light;
-	opacity: 40%;
-	content: "";
+	display: none;
+
+	@media (min-width: 768px) {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: -35px;
+		width: 7px;
+		height: 100%;
+		background-color: @bg-color-light;
+		opacity: 40%;
+		content: "";
+	}
 }
 
 .resume__info-title {
 	margin: 0 0 25px;
-	@media (min-width: 1080px) {margin: 0 0 40px;}
+	text-align: center;
+
+	@media (min-width: 768px) {text-align: left;}
+	@media (min-width: 1024px) {margin: 0 0 40px;}
 }
 
 .resume__info-desc {
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 400;
 	letter-spacing: 0.3px;
 	text-align: justify;
 
-	@media (min-width: 1080px) {font-size: 20px;}
+	@media (min-width: 768px) {font-size: 18px;}
+	@media (min-width: 1024px) {font-size: 20px;}
 
 	p {
 		margin: 10px 0 0;
 		&:first-child {margin: 0;}
-		@media (min-width: 1080px) {margin: 15px 0 0}
+		@media (min-width: 1024px) {margin: 15px 0 0}
 	}
 }
 
 .resume__info-list {
 	margin: 0 0 25px;
-	@media (min-width: 1080px) {margin: 0 0 40px;}
+	@media (min-width: 1024px) {margin: 0 0 40px;}
 
 	li {
 		position: relative;
@@ -101,12 +112,17 @@
 
 .resume__info-text {
 	margin: 0 0 25px;
-	@media (min-width: 1080px) {margin: 0 0 40px;}
+	@media (min-width: 1024px) {margin: 0 0 40px;}
 }
 
 .resume__info-text-link {color: @link-color-light;}
 
+.resume__info-button {
+	text-align: center;
+	@media (min-width: 768px) {text-align: left;}
+}
+
 .resume__button {
 	background-color: @button-color-dark;
-	color: #fff;
+	color: @text-color-white;
 }

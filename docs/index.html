@@ -10,7 +10,24 @@
 	<link rel="stylesheet" href="./css/main.css">
 </head>
 
-<body>
+<body data-element="no-scroll">
+
+	<!-- overlay -->
+	<div class="overlay" data-element="overlay"></div>
+	<!-- //overlay -->
+
+	<!-- mobile-menu -->
+	<div class="mobile-menu" data-element="toggle-nav">
+		<div class="mobile-menu__navigation">
+			<div class="navigation">
+				<a href="./index.html" class="navigation-link">Главная</a>
+				<a href="#resume" class="navigation-link">Обо мне</a>
+				<a href="#portfolio" class="navigation-link">Портфолио</a>
+				<a href="#contacts" class="navigation-link">Контакты</a>
+			</div>
+		</div>
+	</div>
+	<!-- // mobile-menu -->
 	
 	<!-- HEADER -->
 	<header>
@@ -20,7 +37,7 @@
 			<!-- header__navigation -->
 			<div class="header__navigation">
 
-				<a href="./index.html" class="header__logo">
+				<a href="./index.html" class="header__logo" data-behaviour="mobile-menu-icon">
 					<img src="./images/logo-willow.png" alt="Logo" class="logo">
 				</a>
 
@@ -29,6 +46,10 @@
 					<a href="#resume" class="navigation-link">Обо мне</a>
 					<a href="#portfolio" class="navigation-link">Портфолио</a>
 					<a href="#contacts" class="navigation-link">Контакты</a>
+				</div>
+
+				<div class="toggle-menu" data-behaviour="toggle-menu-icon">
+					<span class="toggle-menu__bar"></span>
 				</div>
 
 			</div>
@@ -49,6 +70,11 @@
 					</div>
 
 				</div>
+
+				<div class="header__scroll">
+					<img src="./images/header/down-arrow.svg" alt="Вниз">
+				</div>
+
 			</div>
 			<!-- // container -->
 
@@ -333,6 +359,7 @@
 	<!-- // FOOTER -->
 
 	<!-- LIBS -->
+	<script src="./libs/jquery/jquery-3.0.0.min.js"></script>
 	<script src="./libs/mixitup3/mixitup.min.js"></script>
 	<script src="./js/main.js"></script>
 

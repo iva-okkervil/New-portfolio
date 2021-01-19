@@ -1,12 +1,15 @@
 header {
 	position: relative;
 	height: 100vh;
-	background-image: url(../images/header/bg-img.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
 	background-color: @bg-color-light;
 	color: @text-color-white;
+
+	@media (min-width: 480px) {
+		background-image: url(../images/header/bg-img.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
 }
 
 header::before {
@@ -22,11 +25,10 @@ header::before {
 
 .header__content {
 	position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-	z-index: 3;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 .header__navigation {
@@ -34,11 +36,13 @@ header::before {
 	justify-content: space-between;
 	align-items: center;
 	max-width: 1000px;
-	margin: 30px auto 150px;
-	padding: 0 30px;
+	margin: 30px auto 100px;
+	padding: 0 15px;
 	z-index: 3;
 
-	@media (min-width: 1080px) {
+	@media (min-width: 480px) {padding: 0 30px;}
+
+	@media (min-width: 1024px) {
 		max-width: 1400px;
 		margin: 30px auto 200px;
 	}
@@ -57,20 +61,40 @@ header::before {
 
 .header__info-desc {
 	margin: 0 0 40px;
-	font-size: 28px;
+	font-size: 18px;
 	font-weight: 400;
 	text-align: center;
 
-	@media (min-width: 1080px) {font-size: 36px;}
+	@media (min-width: 480px) {font-size: 20px;}
+	@media (min-width: 768px) {font-size: 28px;}
+	@media (min-width: 1024px) {font-size: 36px;}
 }
 
 .header__buttons {
 	display: flex;
-	justify-content: space-between;
+	flex-wrap: wrap;
+	justify-content: center;
 	align-items: center;
 	width: 100%;
+	
+	@media (min-width: 480px) {
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
 
 	@media (min-width: 480px) {width: 80%;}
 	@media (min-width: 640px) {width: 60%;}
 	@media (min-width: 768px) {width: 50%;}
+}
+
+// scroll down
+
+.header__scroll {
+	position: absolute;
+	width: 30px;
+	left: 50%;
+	bottom: 50px;
+	transform: translateX(-50%);
+
+	@media (min-width: 768px) {display: none;}
 }

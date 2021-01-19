@@ -1,56 +1,62 @@
 .portfolio {
-	padding: 80px 0 80px;
+	padding: 40px 0 40px;
 	background-color: @bg-color-light;
 	color: @text-color-white;
 
-	@media (min-width: 1080px) {padding: 150px 0 150px;}
+	@media (min-width: 480px) {padding: 80px 0 80px;}
+	@media (min-width: 1024px) {padding: 150px 0 150px;}
 }
 
 .portfolio__title {
-	margin: 0 0 20px;
+	margin: 0 0 10px;
 	text-align: center;
 
-	@media (min-width: 720px) {margin: 0 0 45px;}
-	@media (min-width: 1080px) {margin: 0 0 7s0px;}
+	@media (min-width: 480px) {margin: 0 0 20px;}
+	@media (min-width: 768px) {margin: 0 0 45px;}
+	@media (min-width: 1024px) {margin: 0 0 70px;}
 }
 
 .portfolio__filter {
 	display: flex;
 	justify-content: space-between;
 	max-width: 65%;
-	margin: 0 auto 35px;
+	margin: 0 auto 28px;
 
-	@media (min-width: 1080px) {margin: 0 auto 45px;}
+	@media (min-width: 768px) {margin: 0 auto 35px;}
+	@media (min-width: 1024px) {margin: 0 auto 45px;}
 }
 
 .portfolio__filter-item {
 	display: none;
 	font-size: 16px;
 
-	@media (min-width: 720px) {
+	@media (min-width: 768px) {
 		display: block;
 		padding: 10px 15px;
-	}
-
-	@media (min-width: 830px) {
-		padding: 15px 20px;
 		font-size: 18px;
 	}
 
-	@media (min-width: 1080px) {font-size: 22px;}
+	@media (min-width: 830px) {padding: 15px 20px;}
+
+	@media (min-width: 1024px) {font-size: 22px;}
 }
 
 .portfolio__card {
-	max-width: 70%;
+	max-width: 90%;
 	border: 2px solid transparent;
 	border-radius: 3px;
-	margin: 0 auto 20px;
-	padding: 20px;
+	margin: 0 auto 10px;
+	padding: 7px;
 	transition: color 0.2s linear, background-color 0.3s linear, border 0.3s linear, box-shadow 0.3s linear;
 
 	&:nth-last-child(1) {margin: 0 auto;}
 
-	@media (min-width: 720px) {
+	@media (min-width: 480px) {
+		padding: 20px;
+		margin: 0 auto 20px;
+	}
+
+	@media (min-width: 768px) {
 		max-width: 48%;
 		margin: 0 0 40px;
 
@@ -60,24 +66,16 @@
 }
 
 .portfolio__card-img {
-	margin: 0 0 20px;
-
-	img {
-		width: 100%;
-		height: auto;
-		background-color: @bg-color-dark;
-
-		@media (min-width: 720px) {
-			width: auto;
-			height: 220px;
-		}
-
-		@media (min-width: 830px) {height: 250px;}
-		@media (min-width: 1080px) {height: 320px;}
-	}
+	margin: 0 0 10px;
+	img {background-color: @bg-color-dark;}
+	@media (min-width: 480px) {margin: 0 0 20px;}
 }
 
-.portfolio__card-title {margin: 0 0 20px;}
+.portfolio__card-title {
+	margin: 0 0 7px;
+	@media (min-width: 480px) {margin: 0 0 12px;}
+	@media (min-width: 768px) {margin: 0 0 20px;}
+}
 
 .portfolio__card-text {
 	font-size: 16px;
@@ -85,5 +83,6 @@
 	text-align: justify;
 
 	@media (min-width: 480px) {font-size: 18px;}
-	@media (min-width: 1080px) {font-size: 20px;}
+	@media (min-width: 768px) {font-size: 20px;}
+	@media (min-width: 1024px) {font-size: 22px;}
 }
